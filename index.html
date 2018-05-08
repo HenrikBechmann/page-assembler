@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8" />
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-4105209-11"></script>
+        <script>
+             if (window.location.hostname == 'budgetpedia.ca') {
+
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+
+                  gtag('config', 'UA-4105209-11');
+            }
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Page Assembler</title>
+
+        <!-- fpr material-ui -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' 
+            rel='stylesheet' 
+            type='text/css' >
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
+            rel="stylesheet" >
+
+        <!-- general style sheets -->
+        <link href="/css/general.css"
+            rel="stylesheet" 
+            type="text/css" >
+
+        <!-- vendor style sheets -->
+        <link href="/css/react-redux-toastr.css"
+            rel="stylesheet" 
+            type="text/css" >
+        <link rel="stylesheet" href="css/react-table.css">
+      </head>
+    <body style = 'background-color: rgb(64, 66, 68)'>
+        <div id="main" class="frame root">
+            <img style = "width:100%" src = "/public/icons/pageassembler.svg" />
+        </div>
+        <script 
+        onerror="document.write('a modern browser like Chrome, Firefox, Safari, or MS Edge is required to run this application')"
+        src="/dist/main.bundle.js"></script>
+        <script src="/dist/vendor.bundle.js"></script>
+    </body>
+</html>
