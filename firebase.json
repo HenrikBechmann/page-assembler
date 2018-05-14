@@ -1,0 +1,50 @@
+{
+  "hosting": {
+    "public": "/",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/.git/**",
+      "**/node_modules/**",
+      "**/ts/**",
+      "**/js/**",
+      "**/config/**",
+      "**/react-pageassembler/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ],
+    "headers": [
+        {
+            "source":"dist/**",
+            "headers":[
+                {
+                    "key":"cache-control",
+                    "value":"public,max-age=0,must-revalidate"
+                }
+            ]
+        },
+        {
+            "source":"public/**",
+            "headers":[
+                {
+                    "key":"cache-control",
+                    "value":"public,max-age=0,must-revalidate"
+                }
+            ]
+        },
+        {
+            "source":"css/**",
+            "headers":[
+                {
+                    "key":"cache-control",
+                    "value":"public,max-age=0,must-revalidate"
+                }
+            ]
+        }
+    ]
+  }
+}
