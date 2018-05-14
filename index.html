@@ -14,6 +14,17 @@
                   gtag('config', 'UA-4105209-11');
             }
         </script>
+
+        <script>
+        // Check that service workers are registered
+        if ('serviceWorker' in navigator) {
+          // Use the window load event to keep the page load performant
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js');
+          });
+        }
+        </script>
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Page Assembler</title>
 
