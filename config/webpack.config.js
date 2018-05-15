@@ -6,9 +6,19 @@ var path = require('path');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var WebpackNotifierPlugin = require('webpack-notifier');
 
+// var swDest = '../sw.js';
+
+// var IM = new WorkboxPlugin.InjectManifest({
+//         swSrc: '../pwa/sw.js',
+//         swDest:'../sw.js'
+//       }
+//   )
+
+// console.log('new InjectManifest',IM)
+
 module.exports = {
-  devtool: 'eval',
-  // This will be our app's entry point (webpack will look for it in the 'src' directory due to the modulesDirectory setting below). Feel free to change as desired.
+  // devtool: 'eval',
+  // // This will be our app's entry point (webpack will look for it in the 'src' directory due to the modulesDirectory setting below). Feel free to change as desired.
   entry: {
     main:'index.tsx',
   },
@@ -16,7 +26,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     // chunkFilename: '[name].bundle.js',
-    path: '/Users/henrikbechmann/Servers/pageassembler/pageassembler.net/dist',
+    path: path.resolve(__dirname + '/../dist'),
     publicPath: '/dist/'
   },
   resolve: {
@@ -66,11 +76,14 @@ module.exports = {
       { 
         alwaysNotify: true,
         title:'Code splitting'
-      },
-      new WorkboxPlugin.InjectManifest({
-        swSrc: '/sw.js',
-      })//,
-      // new BundleAnalyzerPlugin()
-    )
+      }
+    ),
+    new WorkboxPlugin.InjectManifest(
+    {
+        swSrc: 'pwa/sw.js',
+        swDest:'sw.js',
+        importWorkboxFrom:'local',
+    }),
+    // new BundleAnalyzerPlugin()
   ]
 };

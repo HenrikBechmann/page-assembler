@@ -1,6 +1,8 @@
+importScripts("/dist/precache-manifest.a0dabe1b5a9c1020fd10cc217fb96aae.js", "/dist/workbox-v3.2.0/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
 // sw.js
 
-importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js');
+// importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js');
 
 // if (workbox) {
 //   console.log(`Yay! Workbox is loaded 🎉`);
@@ -40,4 +42,5 @@ workbox.routing.registerRoute(
     ],
   })
 );
+
 
