@@ -9,7 +9,8 @@
       "**/ts/**",
       "**/js/**",
       "**/config/**",
-      "**/react-pageassembler/**"
+      "**/react-pageassembler/**",
+      "**/pwa/**"
     ],
     "rewrites": [
       {

@@ -1,14 +1,8 @@
-importScripts("/dist/precache-manifest.a0dabe1b5a9c1020fd10cc217fb96aae.js", "/dist/workbox-v3.2.0/workbox-sw.js");
+importScripts("/dist/precache-manifest.d0cff60a240b6714267167cdc5137b2f.js", "/dist/workbox-v3.2.0/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
 // sw.js
 
-// importScripts('https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js');
-
-// if (workbox) {
-//   console.log(`Yay! Workbox is loaded 🎉`);
-// } else {
-//   console.log(`Boo! Workbox didn't load 😬`);
-// }
+workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
 workbox.routing.registerRoute(
   new RegExp('.*\.js'),
