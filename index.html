@@ -14,12 +14,12 @@
 
         <script>
         // Check that service workers are registered
-        if ('serviceWorker' in navigator) {
-          // Use the window load event to keep the page load performant
-          window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js');
-          });
-        }
+        // if ('serviceWorker' in navigator) {
+        //   // Use the window load event to keep the page load performant
+        //   window.addEventListener('load', () => {
+        //     navigator.serviceWorker.register('/sw.js');
+        //   });
+        // }
         </script>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,28 +28,30 @@
         <!-- fpr material-ui -->
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500' 
             rel='stylesheet' 
-            type='text/css' >
+            type="text/css" 
+        />
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" 
-            rel="stylesheet" >
+            rel="stylesheet" 
+            type="text/css" 
+        />
 
         <!-- general style sheets -->
-        <link href="/css/general.css"
+<!--         <link href="/css/general.css"
             rel="stylesheet" 
-            type="text/css" >
-
+            type="text/css" 
+        />
+ -->
         <!-- vendor style sheets -->
-        <link href="/css/react-redux-toastr.css"
+<!--         <link href="/css/react-redux-toastr.css"
             rel="stylesheet" 
-            type="text/css" >
+            " >
         <link rel="stylesheet" href="css/react-table.css">
-      </head>
-    <body style = 'background-color: rgb(64, 66, 68)'>
-        <div id="main" class="frame root">
-            <img style = "width:100%" src = "/public/icons/pageassembler.svg" />
+ -->      </head>
+    <body style = 'background-color: rgb(64, 66, 68);margin:0'>
+        <div id="main" class="frame root" style="background-image: url(/public/icons/pageassembler.svg);background-repeat: no-repeat;background-size: cover;min-height:100vh">
+            <div id="main"><span style="color:white">Loading...</span></div>
         </div>
-<!--         <script 
-        onerror="document.write('a modern browser like Chrome, Firefox, Safari, or MS Edge is required to run this application')"
-        src="/dist/main.bundle.js"></script>
-        <script src="/dist/vendor.bundle.js"></script>
- -->    </body>
+        <script src = "/dist/main.bundle.js"></script>
+        <script src = "/dist/vendor.bundle.js"></script>
+    </body>
 </html>

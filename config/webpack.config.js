@@ -1,6 +1,7 @@
 // webpack.config.js
 var webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const WorkboxPlugin = require('workbox-webpack-plugin');
 var path = require('path');
 // const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 var WebpackNotifierPlugin = require('webpack-notifier');
@@ -15,7 +16,7 @@ module.exports = {
   output: {
     filename: '[name].bundle.js',
     // chunkFilename: '[name].bundle.js',
-    path: '/Users/henrikbechmann/Servers/pageassembler/www/pageassembler.net/dist',
+    path: '/Users/henrikbechmann/Servers/pageassembler/pageassembler.net/dist',
     publicPath: '/dist/'
   },
   resolve: {
@@ -49,7 +50,7 @@ module.exports = {
          chunks: 'initial',
          name: 'vendor',
          enforce: true
-        },
+        }//,
         // utilities: {
         //  test: '/ts/addons/exporer/modules/utilities.tsx',
         //  chunks: 'initial',
@@ -65,12 +66,11 @@ module.exports = {
       { 
         alwaysNotify: true,
         title:'Code splitting'
-      },
+      }//,
+      // new WorkboxPlugin.InjectManifest({
+      //   swSrc: '../sw.js',
+      // })
       // new BundleAnalyzerPlugin()
     )
   ]
 };
-
-
-
-
