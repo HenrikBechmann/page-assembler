@@ -66,10 +66,10 @@ module.exports = {
       { 
         alwaysNotify: true,
         title:'Code splitting'
-      }//,
-      // new WorkboxPlugin.InjectManifest({
-      //   swSrc: '../sw.js',
-      // })
+      },
+      new WorkboxPlugin.InjectManifest({
+        swSrc: '/sw.js',
+      })//,
       // new BundleAnalyzerPlugin()
     )
   ]
