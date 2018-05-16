@@ -6,7 +6,9 @@ import { render } from 'react-dom'
 // import 'react-redux-toastr/lib/css/react-redux-toastr.min.css'
 
 let Main = () => {
-    return <div style={{color:'cornsilk'}}>Hello there world!</div>
+    return <div style={{color:'cornsilk'}}>Hello there world!
+    <img src="/public/images/HenrikHeadshot1.jpg" />
+    </div>
 }
 
 try {

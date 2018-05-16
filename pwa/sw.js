@@ -2,15 +2,30 @@
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
-workbox.routing.registerRoute(
-  new RegExp('.*\.js'),
-  workbox.strategies.networkFirst()
-);
+console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
-workbox.routing.registerRoute(
-  new RegExp('.*\.html'),
-  workbox.strategies.networkFirst()
-);
+// workbox.routing.registerRoute(
+//   new RegExp('.*\.js'),
+//   workbox.strategies.cacheFirst({
+//     cacheName:'js-cache'
+//   })
+// );
+
+// console.log('register html')
+
+workbox.routing.registerNavigationRoute(
+  "/index.html")
+
+// workbox.routing.registerRoute(
+//   new RegExp('.*\.html'),
+//   workbox.strategies.cacheFirst(
+//       {
+//         cacheName:'html-cache'
+//       }
+//     )
+// );
+
+console.log('register css')
 
 workbox.routing.registerRoute(
   // Cache CSS files
@@ -18,25 +33,19 @@ workbox.routing.registerRoute(
   // Use cache but update in the background ASAP
   workbox.strategies.staleWhileRevalidate({
     // Use a custom cache name
-    cacheName: 'css-cache',
+    cacheName:'css-cache'
   })
 );
+
+console.log('register images')
 
 workbox.routing.registerRoute(
   // Cache image files
   /.*\.(?:png|jpg|jpeg|svg|gif)/,
   // Use the cache if it's available
-  workbox.strategies.cacheFirst({
+  workbox.strategies.staleWhileRevalidate({
     // Use a custom cache name
-    cacheName: 'image-cache',
-    plugins: [
-      new workbox.expiration.Plugin({
-        // Cache only 20 images
-        maxEntries: 20,
-        // Cache for a maximum of a week
-        maxAgeSeconds: 7 * 24 * 60 * 60,
-      })
-    ],
+    cacheName:'image-cache'
   })
 );
 
