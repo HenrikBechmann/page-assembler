@@ -4,6 +4,15 @@ workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
+const precacheController = new workbox.precaching.PrecacheController()
+
+precacheController.addToCacheList([
+  {
+    url: '/index.html',
+    revision: 'abcd',
+  }
+]);
+
 console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
 workbox.routing.registerRoute(
@@ -12,7 +21,7 @@ workbox.routing.registerRoute(
 );
 
 workbox.routing.registerNavigationRoute(
-  'index.html'
+  '/index.html'
   )
 
 // workbox.routing.registerRoute(
