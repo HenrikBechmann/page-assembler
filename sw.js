@@ -6,17 +6,14 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
 console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
-// workbox.routing.registerRoute(
-//   new RegExp('.*\.js'),
-//   workbox.strategies.cacheFirst({
-//     cacheName:'js-cache'
-//   })
-// );
-
-// console.log('register html')
+workbox.routing.registerRoute(
+  new RegExp('.*\.js'),
+  workbox.strategies.cacheFirst()
+);
 
 workbox.routing.registerNavigationRoute(
-  "/index.html")
+  'index.html'
+  )
 
 // workbox.routing.registerRoute(
 //   new RegExp('.*\.html'),
@@ -26,8 +23,6 @@ workbox.routing.registerNavigationRoute(
 //       }
 //     )
 // );
-
-console.log('register css')
 
 workbox.routing.registerRoute(
   // Cache CSS files
@@ -39,8 +34,6 @@ workbox.routing.registerRoute(
   })
 );
 
-console.log('register images')
-
 workbox.routing.registerRoute(
   // Cache image files
   /.*\.(?:png|jpg|jpeg|svg|gif)/,
@@ -48,7 +41,8 @@ workbox.routing.registerRoute(
   workbox.strategies.staleWhileRevalidate({
     // Use a custom cache name
     cacheName:'image-cache'
-  })
+  }),'GET'
 );
+
 
 
