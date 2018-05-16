@@ -2,7 +2,7 @@ importScripts("/dist/precache-manifest.1fe9ad4f9d829f69cea37a507348ea08.js", "/d
 workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
 // sw.js
 
-
+// short term solution...
 self.__precacheManifest.push({revision:'abcd',url:'/index.html'})
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)

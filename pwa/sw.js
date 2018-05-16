@@ -1,6 +1,6 @@
 // sw.js
 
-
+// short term solution...
 self.__precacheManifest.push({revision:'abcd',url:'/index.html'})
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
