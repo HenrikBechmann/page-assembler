@@ -10,7 +10,7 @@ workbox.precaching.precacheAndRoute(self.__precacheManifest)
 console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
 
-// isolate external requests (like CDN for google) with staleWhileRevalidate 
+// TODO: isolate external requests (like CDN for google) with staleWhileRevalidate 
 workbox.routing.registerRoute(
   /.*\.js'/,
   workbox.strategies.networkFirst()
@@ -19,15 +19,6 @@ workbox.routing.registerRoute(
 workbox.routing.registerNavigationRoute(
   '/index.html'
   )
-
-// workbox.routing.registerRoute(
-//   new RegExp('.*\.html'),
-//   workbox.strategies.cacheFirst(
-//       {
-//         cacheName:'html-cache'
-//       }
-//     )
-// );
 
 workbox.routing.registerRoute(
   // Cache CSS files
