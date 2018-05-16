@@ -35,7 +35,7 @@ workbox.routing.registerRoute(
   workbox.strategies.networkFirst({
     // Use a custom cache name
     cacheName:'image-cache'
-  }),'GET'
+  })
 );
 
 
