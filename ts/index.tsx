@@ -8,14 +8,11 @@ import MainController from './core/start/main.controller'
 
 injectTapEventPlugin()
 
-const Main = () => {
-    return <div style={{color:'cornsilk'}}>Hello there world!<br />
-    <img src="/public/images/HenrikHeadshot1.jpg" />
-    </div>
-}
+let globalmessage = ''
+let version = '0.1'
 
 try {
-render( <Main />, 
+render( <MainController globalmessage = {globalmessage} version = {version} />, 
      document.getElementById('main') )
 } catch (e) {
     <div>

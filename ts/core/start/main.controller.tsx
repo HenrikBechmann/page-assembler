@@ -17,15 +17,14 @@ const history = createHistory()
 
 import MainView from './main.view'
 
-class Main extends React.Component<any,any> { 
+class MainController extends React.Component<any,any> { 
 
     render() {
-        let { globalmessage, version } = this.props
+        let { globalmessage, version } = this.props // TODO: display version
 
-        let mainviewstyle:{} 
-        // React.CSSProperties = {
-        //     fontFamily,
-        // }
+        let mainviewstyle:React.CSSProperties = {
+            fontFamily:muiTheme.fontFamily,
+        }
 
         return (
             <MuiThemeProvider muiTheme = {muiTheme}>
@@ -36,6 +35,5 @@ class Main extends React.Component<any,any> {
     }
 }
 
-export default DragDropContext(DnDBackend)(Main)
-// export default Main
+export default DragDropContext(DnDBackend)(MainController)
 

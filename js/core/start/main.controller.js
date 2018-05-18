@@ -9,15 +9,14 @@ const DnDBackend = DnDTouchBackend({ enableMouseEvents: true });
 const muiTheme = getMuiTheme();
 const history = createHistory();
 import MainView from './main.view';
-class Main extends React.Component {
+class MainController extends React.Component {
     render() {
-        let { globalmessage, version } = this.props;
-        let mainviewstyle;
-        // React.CSSProperties = {
-        //     fontFamily,
-        // }
+        let { globalmessage, version } = this.props; // TODO: display version
+        let mainviewstyle = {
+            fontFamily: muiTheme.fontFamily,
+        };
         return (React.createElement(MuiThemeProvider, { muiTheme: muiTheme },
             React.createElement(MainView, { history: history, globalmessage: globalmessage, style: mainviewstyle })));
     }
 }
-export default DragDropContext(DnDBackend)(Main);
+export default DragDropContext(DnDBackend)(MainController);

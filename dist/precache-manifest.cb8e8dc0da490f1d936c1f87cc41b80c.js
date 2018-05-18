@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "538710241a13d5dcd0bc",
+    "revision": "f77ecfc1c52034412738",
     "url": "/dist/vendor.bundle.js"
   },
   {
-    "revision": "37bb168faba3ce2eade7",
+    "revision": "15bb314d4f267efbfd20",
     "url": "/dist/main.bundle.js"
   }
 ];
