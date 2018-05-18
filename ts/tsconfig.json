@@ -10,7 +10,7 @@
         "removeComments": false,
         "noLib": false,
         "preserveConstEnums": true,
-        "importHelpers":true,
         "suppressImplicitAnyIndexErrors": true,
-        "allowSyntheticDefaultImports": true    }
+        "allowSyntheticDefaultImports": true    
+    }
 }
