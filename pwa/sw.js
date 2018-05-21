@@ -5,7 +5,7 @@ self.__precacheManifest.push({revision:'abcde',url:'/index.html'})
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
-console.log('from sw self.__precacheManifest',self.__precacheManifest)
+// console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
 
 // TODO: isolate external requests (like CDN for google) with staleWhileRevalidate 
