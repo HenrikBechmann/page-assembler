@@ -1,4 +1,4 @@
-importScripts("/dist/precache-manifest.cb8e8dc0da490f1d936c1f87cc41b80c.js", "/dist/workbox-v3.2.0/workbox-sw.js");
+importScripts("/dist/precache-manifest.30b44a119ec5f1c8fdb9cb39faea0660.js", "/dist/workbox-v3.2.0/workbox-sw.js");
 workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
 // sw.js
 
@@ -7,7 +7,7 @@ self.__precacheManifest.push({revision:'abcde',url:'/index.html'})
 
 workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
-console.log('from sw self.__precacheManifest',self.__precacheManifest)
+// console.log('from sw self.__precacheManifest',self.__precacheManifest)
 
 
 // TODO: isolate external requests (like CDN for google) with staleWhileRevalidate 
