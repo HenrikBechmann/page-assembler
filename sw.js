@@ -1,5 +1,5 @@
-importScripts("/dist/precache-manifest.30b44a119ec5f1c8fdb9cb39faea0660.js", "/dist/workbox-v3.2.0/workbox-sw.js");
-workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.2.0"});
+importScripts("/dist/precache-manifest.b863bd5e46a3204c192e731064c6d30b.js", "/dist/workbox-v3.3.1/workbox-sw.js");
+workbox.setConfig({modulePathPrefix: "/dist/workbox-v3.3.1"});
 // sw.js
 
 // short term solution...
