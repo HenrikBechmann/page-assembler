@@ -2,11 +2,8 @@
 
 import * as React from 'react';
 import { render } from 'react-dom'
-import injectTapEventPlugin from 'react-tap-event-plugin'
 
 import MainController from './core/start/main.controller'
-
-injectTapEventPlugin()
 
 let globalmessage = ''
 let version = '0.1'

@@ -2,6 +2,10 @@
   "name": "pageassembler.net",
   "version": "1.0.0",
   "description": "cms",
+  "repositoryt": {
+    "type": "git",
+    "url": "https://github.com/HenrikBechmann/page-assembler"
+  },
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,15 +27,13 @@
     "react-dom": "^16.4.1",
     "react-draggable": "^3.0.5",
     "react-images-upload": "^1.2.0",
-    "react-tap-event-plugin": "^3.0.3",
     "react-virtualized": "^9.20.1",
     "sortablejs": "^1.7.0",
-    "workbox-sw": "^3.3.1"
+    "workbox-sw": "^3.4.1"
   },
   "devDependencies": {
     "@types/node": "^10.5.2",
     "@types/react": "^16.4.6",
-    "@types/react-tap-event-plugin": "0.0.30",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.5",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
@@ -41,11 +43,10 @@
     "babelify": "^8.0.0",
     "css-loader": "^1.0.0",
     "eslint-config-react-tools": "^1.2.5",
-    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-jsx-a11y": "^6.1.1",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.2.0",
     "raw-loader": "^0.5.1",
-    "redux-devtools": "^3.4.1",
     "style-loader": "^0.21.0",
     "ts-loader": "^4.4.2",
     "typescript": "^2.9.2",
@@ -53,6 +54,6 @@
     "webpack-bundle-analyzer": "^2.13.1",
     "webpack-cli": "^3.0.8",
     "webpack-notifier": "^1.6.0",
-    "workbox-webpack-plugin": "^3.3.1"
+    "workbox-webpack-plugin": "^3.4.1"
   }
 }
